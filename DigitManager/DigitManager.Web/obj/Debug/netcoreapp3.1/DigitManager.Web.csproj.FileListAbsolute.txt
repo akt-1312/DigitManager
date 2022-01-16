@@ -1,0 +1,339 @@
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\appsettings.json
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Api.exe
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\libman.json
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.StaticWebAssets.xml
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.exe
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.deps.json
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.runtimeconfig.json
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.runtimeconfig.dev.json
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.pdb
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.Views.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.Views.pdb
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\BlazorComponentUtilities.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Blazored.LocalStorage.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Blazored.SessionStorage.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\BlazorPro.Spinkit.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Web.Cors.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Web.Http.Cors.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Blazor.HttpClient.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Authorization.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Forms.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Web.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.DataProtection.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.DataProtection.Extensions.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.JSInterop.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\TableDependency.SqlClient.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Api.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.ModelLibrary.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Api.pdb
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.ModelLibrary.pdb
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.csprojAssemblyReference.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.AssemblyInfoInputs.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.AssemblyInfo.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.RazorComponent.input.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\App.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\AgentSection\AgentPage.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\AgentSection\AgentProfile.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Login.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\OwnerSection\ManageAgent.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\OwnerSection\OwnerPage.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\OwnerSection\OwnerProfile.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\AlertMessageDialogBox.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\DeleteConfirmModal.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\FocusableInputText.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\GridColumn.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\MainLayout.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\NavMenu.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\TableTemplate.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\_Imports.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.TagHelpers.input.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.TagHelpers.output.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.RazorCoreGenerate.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\_Host.cshtml.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.RazorAssemblyInfo.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.RazorAssemblyInfo.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.RazorTargetAssemblyInfo.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.RazorTargetAssemblyInfo.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.Views.pdb
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.csproj.CopyComplete
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\staticwebassets\DigitManager.Web.StaticWebAssets.Manifest.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\staticwebassets\DigitManager.Web.StaticWebAssets.xml
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.pdb
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.genruntimeconfig.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\RealTimeNumGrid.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\AccessDenied.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\NumAndAmmountPair.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\VoucherUpdateDelete.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\ShortcutGuide.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\AgentForOwnerSelf.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.DataAnnotations.Validation.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.csproj.CoreCompileInputs.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.MvcApplicationPartsAssemblyInfo.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.MvcApplicationPartsAssemblyInfo.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\DigitManager.Web.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\App.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\AgentSection\AgentPage.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\AgentSection\AgentProfile.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\Login.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\OwnerSection\ManageAgent.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\OwnerSection\OwnerPage.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\OwnerSection\OwnerProfile.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\AccessDenied.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\AgentForOwnerSelf.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\AlertMessageDialogBox.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\DeleteConfirmModal.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\FocusableInputText.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\GridColumn.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\MainLayout.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\NavMenu.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\NumAndAmmountPair.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\RealTimeNumGrid.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\ShortcutGuide.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\SurveyPrompt.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\TableTemplate.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\VoucherUpdateDelete.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\_Imports.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\SearchedSpecificNum.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\SearchedSpecificNum.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\KeypadNum.razor.g.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\KeypadNum.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\libman.json
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Api.deps.json
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Api.runtimeconfig.json
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Api.runtimeconfig.dev.json
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Api.StaticWebAssets.xml
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Api.exe
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.StaticWebAssets.xml
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.exe
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.deps.json
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.runtimeconfig.json
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.runtimeconfig.dev.json
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.pdb
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.Views.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Web.Views.pdb
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\BlazorComponentUtilities.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Blazored.LocalStorage.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Blazored.SessionStorage.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\BlazorPro.Spinkit.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Web.Cors.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Web.Http.Cors.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Blazor.HttpClient.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Authorization.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.DataAnnotations.Validation.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Forms.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Web.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.DataProtection.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.DataProtection.Extensions.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Microsoft.JSInterop.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\TableDependency.SqlClient.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Api.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.ModelLibrary.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.Api.pdb
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\bin\Debug\netcoreapp3.1\DigitManager.ModelLibrary.pdb
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.csproj.AssemblyReference.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.GeneratedMSBuildEditorConfig.editorconfig
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.AssemblyInfoInputs.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.AssemblyInfo.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.csproj.CoreCompileInputs.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.MvcApplicationPartsAssemblyInfo.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.MvcApplicationPartsAssemblyInfo.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.RazorComponent.input.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\App.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\AgentSection\AgentPage.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\AgentSection\AgentProfile.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Login.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\OwnerSection\ManageAgent.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\OwnerSection\OwnerPage.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\OwnerSection\OwnerProfile.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\AccessDenied.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\AgentForOwnerSelf.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\AlertMessageDialogBox.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\DeleteConfirmModal.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\FocusableInputText.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\GridColumn.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\KeypadNum.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\MainLayout.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\NavMenu.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\NumAndAmmountPair.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\RealTimeNumGrid.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\SearchedSpecificNum.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\ShortcutGuide.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\TableTemplate.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\VoucherUpdateDelete.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\_Imports.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.RazorComponent.output.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\DigitManager.Web.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.TagHelpers.input.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.TagHelpers.output.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.RazorCoreGenerate.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\App.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\AgentSection\AgentPage.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\AgentSection\AgentProfile.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\Login.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\OwnerSection\ManageAgent.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\OwnerSection\OwnerPage.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\OwnerSection\OwnerProfile.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\AccessDenied.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\AgentForOwnerSelf.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\AlertMessageDialogBox.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\DeleteConfirmModal.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\FocusableInputText.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\GridColumn.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\KeypadNum.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\MainLayout.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\NavMenu.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\NumAndAmmountPair.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\RealTimeNumGrid.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\SearchedSpecificNum.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\ShortcutGuide.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\SurveyPrompt.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\TableTemplate.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Shared\VoucherUpdateDelete.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\_Imports.razor.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\Razor\Pages\_Host.cshtml.g.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.RazorAssemblyInfo.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.RazorAssemblyInfo.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\staticwebassets\DigitManager.Web.StaticWebAssets.Manifest.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\staticwebassets\DigitManager.Web.StaticWebAssets.xml
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.RazorTargetAssemblyInfo.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.RazorTargetAssemblyInfo.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.Views.pdb
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.csproj.CopyComplete
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.pdb
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.Web\obj\Debug\netcoreapp3.1\DigitManager.Web.genruntimeconfig.cache

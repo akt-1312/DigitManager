@@ -1,0 +1,22 @@
+﻿<div class="eachNumDiv">
+    <input readonly @ondblclick="@(()=> OnDigitDbClick(NumKey))" class="numDescription" value="@NumKey" />
+    <input class="numAmmount" value="@Ammount" />
+</div>
+
+@code {
+    [Parameter]
+    public string NumKey { get; set; }
+
+    [Parameter]
+    public string Ammount { get; set; }
+
+    [Parameter]
+    public EventCallback<string> OnDbClickTwoNum { get; set; }
+
+    public async Task OnDigitDbClick(string towNum)
+    {
+        await OnDbClickTwoNum.InvokeAsync(towNum);
+        StateHasChanged();
+    }
+
+}

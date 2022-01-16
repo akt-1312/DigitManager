@@ -1,0 +1,10 @@
+﻿@page "/agentPage"
+@inherits DigitManager.Web.Pages.AgentSection.AgentPageBase
+@attribute [Authorize(Roles = "Agent, Player")]
+
+<h3>AgentPage</h3>
+
+<h1>@DateTime.UtcNow.AddMinutes(390).ToString()</h1>
+<h1>@DateTime.UtcNow</h1>
+<h1>@DateTime.UtcNow.AddMinutes(390)</h1>
+<p>@Test</p>

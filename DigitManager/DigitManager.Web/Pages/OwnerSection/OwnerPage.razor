@@ -1,0 +1,429 @@
+﻿@page "/ownerPage"
+@inherits DigitManager.Web.Pages.OwnerSection.OwnerPageBase
+@attribute [Authorize(Roles = "Owner")]
+
+<AuthorizeView Roles="Owner">
+    <Authorized Context="DigitAuth">
+
+        <style>
+            .divNumColumnGroup {
+                width: 5.7rem;
+            }
+
+            .toFloatColumnGroup {
+                display: inline-block;
+            }
+
+            .inlineFormGroup {
+                display: inline-grid;
+            }
+
+            .topInfoStickyRow {
+                position: sticky;
+                top: 0;
+                margin-bottom: 10px;
+                z-index: 2;
+            }
+
+            .form-group, label {
+                margin-bottom: 0;
+            }
+
+            .topInfoStickyContainer {
+                background-color: yellow;
+                padding: 0px 5px 5px 5px;
+            }
+
+            .infoDataBox {
+                width: 6rem;
+                font-size: 12px;
+                height: 24px;
+                border: 0.5px solid silver;
+                border-radius: 0.2rem;
+            }
+
+            .readonlyInfoDataBox {
+                pointer-events: none;
+                color: white;
+                background-color: blue;
+                font-size: 0.7rem;
+                font-weight: bold;
+                border-radius: 0.2rem;
+                border: 0.5px solid blue;
+            }
+
+            .lblInfoDataBox {
+                font-size: 10px;
+                font-weight: 600;
+            }
+
+            ::-webkit-inner-spin-button {
+                padding: 0;
+                margin: 0;
+            }
+
+            ::-webkit-calendar-picker-indicator {
+                padding: 0;
+                margin: 0;
+            }
+
+            /* Chrome, Safari, Edge, Opera */
+            input[type=number].infoDataBox::-webkit-outer-spin-button,
+            input[type=number].infoDataBox::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            /* Firefox */
+            input.infoDataBox[type=number] {
+                -moz-appearance: textfield;
+            }
+
+
+            #tblSellingNum th, #tblSellingNum td {
+                padding: 0 3px;
+                font-size: 12px;
+            }
+
+            #tblSellingNum td {
+                vertical-align: middle;
+                overflow-wrap: anywhere;
+                font-size: 11px;
+            }
+
+            #numListBlock {
+                -webkit-user-select: none; /* Safari */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* IE10+/Edge */
+                user-select: none; /* Standard */
+            }
+        </style>
+        <div class="container-fluid">
+            <SpinLoader IsLoading="IsLoadingData">
+                <LoadingTemplate>
+                    <div style="height:85vh; display:flex;">
+                        <CircleFade Center="true" Color="blue" Size="60px"></CircleFade>
+                    </div>
+                </LoadingTemplate>
+                <ContentTemplate>
+                    @if (Owner != null && !(Owner.OwnerId <= 0))
+                    {
+                        <div class="row topInfoStickyRow">
+                            <div class="col-12">
+                                <div class="topInfoStickyContainer">
+                                    <div class="form-group inlineFormGroup">
+                                        <label class="lblInfoDataBox">Date</label>
+                                        <input class="infoDataBox" @bind="IntendedDate" @bind:event="oninput" @onchange="OnChangeActionRelativeToSubDigit" type="date" />
+                                    </div>
+                                    <div class="form-group inlineFormGroup">
+                                        <label class="lblInfoDataBox">Morning Or Evening</label>
+                                        <select class="infoDataBox" @bind="TimeAMPM" @bind:event="oninput" @onchange="OnChangeActionRelativeToSubDigit">
+                                            @foreach (var ampm in Enum.GetValues(typeof(TimeAMOrPM)))
+                                            {
+                                                <option value="@ampm">@ampm.ToString()</option>
+                                            }
+                                        </select>
+                                    </div>
+                                    <div class="form-group inlineFormGroup">
+                                        <label class="lblInfoDataBox">Agent</label>
+                                        <select class="infoDataBox" @bind="AgentId" @bind:event="oninput" @onchange="OnChangeActionRelativeToSubDigit">
+                                            <option value="0">--All--</option>
+                                            @foreach (var agent in Agents)
+                                            {
+                                                <option value="@agent.AgentId">@agent.UserName</option>
+                                            }
+                                        </select>
+                                    </div>
+                                    <div class="form-group inlineFormGroup">
+                                        <label class="lblInfoDataBox">To Play(Max: Head)</label>
+                                        <input class="infoDataBox" @bind="MaxAmmountToPlay" @bind:event="onchange" @oninput="OnMaxAmmountChange" type="number" />
+                                    </div>
+                                    <div class="form-group inlineFormGroup">
+                                        <label class="lblInfoDataBox">Multiply</label>
+                                        <input class="infoDataBox readonlyInfoDataBox" @bind="MultiplyRate" type="number" />
+                                    </div>
+                                    <div class="form-group inlineFormGroup">
+                                        <label class="lblInfoDataBox">Total Ammount</label>
+                                        <input class="infoDataBox readonlyInfoDataBox" @bind="TotalAmmount" type="number" />
+                                    </div>
+                                    <div class="form-group inlineFormGroup">
+                                        <label class="lblInfoDataBox">Commission %</label>
+                                        <input class="infoDataBox readonlyInfoDataBox" @bind="CommissionPercentage" />
+                                    </div>
+                                    <div class="form-group inlineFormGroup">
+                                        <label class="lblInfoDataBox">Commission</label>
+                                        <input class="infoDataBox readonlyInfoDataBox" @bind="CommissionAmmount" type="number" />
+                                    </div>
+                                    <div class="form-group inlineFormGroup">
+                                        <label class="lblInfoDataBox">Net Ammount</label>
+                                        <input class="infoDataBox readonlyInfoDataBox" @bind="NetAmmount" type="number" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-5" style="min-height:70vh;">
+                            <div class="col-xl-5 col-lg-12">
+                                <div class="" style="border:1px solid; height:100%; display:flex;align-items:center;
+                                                justify-content:center; max-width:624px;">
+                                    <SpinLoader IsLoading="IsProcessingAction">
+                                        <LoadingTemplate>
+                                            <div style="width:100%; height:100%; position:absolute; display:flex;
+                                                justify-content:center; align-items:center; z-index:1;">
+                                                <div style="position:absolute;">
+                                                    <Grid Color="blue" Size="30px">
+                                                    </Grid>
+                                                </div>
+                                            </div>
+                                        </LoadingTemplate>
+                                    </SpinLoader>
+
+                                    <div class="w-100">
+
+                                        <div class="w-100 d-block" style="padding:10px;">
+                                            <div style="border:1px dashed; width:100%;">
+                                                <div style="max-height:500px; min-height:400px; position:relative;">
+                                                    <div class="">
+                                                        <div class="w-100 d-block" style="padding:5px;">
+                                                            <div class="">
+                                                                <input id="chkIsShowKeypad" @bind-value="IsShowKeypad" type="checkbox" class="chkCustomDesign" />
+                                                                <label class="lblForChkCustomDesign" for="chkIsShowKeypad">
+                                                                    <span style="font-size: 13px; margin-left:-10px; color:brown; font-weight:600;">Show Keypad</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="w-100" style="padding:5px;">
+                                                            <select @ref="ddlToSellAgent" class="infoDataBox" @bind="AgentIdToSell" @bind:event="oninput" @onchange="OnSellingAgentChange">
+                                                                <option value="0">Select Name</option>
+                                                                @foreach (var agent in AgentsByOwnerSelf)
+                                                                {
+                                                                    <option value="@agent.AgentId">@agent.UserName</option>
+                                                                }
+                                                            </select>
+                                                            <button class="btnSellingBlock" @onclick="@(() =>ShowAgentCreateModal())">
+                                                                <span style="position:inherit;" class="oi oi-people"></span>
+                                                            </button>
+                                                            <button class="btnSellingBlock" @onclick="@(()=> OnVoucherBookClick())">
+                                                                <span style="position:inherit;" class="oi oi-book"></span>
+                                                            </button>
+                                                            @{
+                                                                bool isSaveDisable = (MainDigitsSelling != null && MainDigitsSelling.Count > 0) ? (IsProcessingAction ? true : false) : true;
+                                                                string btnSaveName = IsProcessingAction && MainDigitsSelling != null && MainDigitsSelling.Count > 0 ? "Loading..." : "Save";
+                                                            }
+                                                            <button disabled="@isSaveDisable" class="btnSellingBlock" @onclick="SaveSellingNum" style="font-size:13px; width:73px; display: inline;">
+                                                                <span>@btnSaveName</span>
+                                                            </button>
+                                                            <button disabled="@isSaveDisable" class="btnSellingBlock" style="font-size:13px;">
+                                                                <span>Cancel</span>
+                                                            </button>
+                                                            <button class="btnSellingBlock" @onclick="@(()=> ShowShortcutInfoGuideModal())">
+                                                                <span style="position:inherit;" class="oi oi-info"></span>
+                                                            </button>
+                                                        </div>
+                                                        @if (!IsShortcutStringValid)
+                                                        {
+                                                            <div class="w-100" style="padding: 0px 5px;">
+                                                                <div style="border:0.5px solid silver; padding:0px 5px; color:white; background:red; border-radius:0.2rem;">
+                                                                    <span>@ShortcutStringErrorMessage</span>
+                                                                    <button style="position:absolute; right: 5px; height:24px; display:inline-flex;
+                                                                            align-items:center; color:white; background:black; border-radius:0.2rem;
+                                                                            border:0.5px solid yellow;" @onclick="CloseInvalidShortcutStringMessage">
+                                                                        <span>&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        }
+                                                        <div class="w-100" style="padding:5px; padding-right:60px;">
+                                                            <input @ref="InputToFocus" @bind="ShortcutString" @bind:event="oninput" @onkeydown="OnSellingInputChange" class="inputSellingNum w-100" onin style="font-size:12px; height:30px; padding-right:10px;" />
+                                                            <button @onclick="OnSellingAdded" style="position:absolute; right: 34px; height:30px; display:inline-flex;
+                                                                            align-items:center; color:blue; background:yellow; border-radius:0.2rem;
+                                                                            border:0.5px solid silver;">
+                                                                <span class="oi oi-plus"></span>
+                                                            </button>
+                                                            <button @onclick="OnSellingInputClear" style="position:absolute; right: 5px; height:30px; display:inline-flex;
+                                                                            align-items:center; color:white; background:black; border-radius:0.2rem;
+                                                                            border:0.5px solid yellow;">
+                                                                <span class="oi oi-delete"></span>
+                                                            </button>
+                                                        </div>
+                                                        @if (IsShowKeypad)
+                                                        {
+                                                            <div class="w-100" style="padding:5px;">
+                                                                <KeypadNum @bind-NumString="ShortcutString"></KeypadNum>
+                                                            </div>
+
+                                                        }
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="w-100 separateScrollFullHeight" style="padding:0px 5px;
+                                                             max-height:300px; overflow-y:scroll;">
+                                                            <table id="tblSellingNum" class="table table-hover table-bordered mb-1">
+                                                                <thead class="bg-primary">
+                                                                    <tr>
+                                                                        <th style="width:35px;">No.</th>
+                                                                        <th>Description</th>
+                                                                        <th style="width:65px;">Ammount</th>
+                                                                        <th colspan="2"></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    @if (MainDigitsSelling != null && MainDigitsSelling.Count > 0)
+                                                                    {
+                                                                        foreach (var item in MainDigitsSelling.Select((value, i) => new { value, i }))
+                                                                        {
+                                                                            <tr>
+                                                                                <td>@(item.i + 1)</td>
+                                                                                <td>@item.value.DescriptionToShowUser</td>
+                                                                                <td>@item.value.TotalAmmount</td>
+                                                                                <td style="width:23px;">
+                                                                                    <button @onclick="@(()=> EditSellingMainDigit(item.value))"
+                                                                                            style="padding:1px 2px 2px 2px; display:inline-flex; background:yellow;
+                                                                                         color:black; border:0.5px solid silver; border-radius:0.1rem;">
+                                                                                        <span class="oi oi-action-undo" style=""></span>
+                                                                                    </button>
+                                                                                </td>
+                                                                                <td style="width:23px;">
+                                                                                    <button @onclick="@(()=> RemoveSellingMainDigit(item.value))"
+                                                                                            style="padding:1px 2px 2px 2px; display:inline-flex; background:red;
+                                                                                         color:white; border:0.5px solid silver; border-radius:0.1rem;">
+                                                                                        <span class="oi oi-circle-x" style=""></span>
+                                                                                    </button>
+                                                                                </td>
+
+                                                                            </tr>
+                                                                        }
+                                                                    }
+                                                                </tbody>
+                                                            </table>
+                                                            @if (MainDigitsSelling != null && MainDigitsSelling.Count > 0)
+                                                            {
+                                                                <div style="height: 20px; position:sticky; bottom:0; background-color: blue; display:block;
+                                                                    font-size:13px; font-weight:bold; color:white; text-align:center; border:1px solid silver;
+                                                                    border-radius:0.2rem;">
+                                                                    <span style="position:absolute; left:5px;">( @MainDigitsSelling.Count )</span>Total: <span style="color:yellow; font-weight:bold;">@MainDigitsSelling.Sum(x => x.TotalAmmount)</span>
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        @*<div class="w-100 d-block" style="padding:10px;">
+                                                <div style="border:1px dashed; width:100%;">
+                                                    <div style="max-height:100px;">
+                                                        <div class="">
+                                                            <div class="w-100" style="padding:5px;">
+                                                                <input class="inputSellingNum w-100" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>*@
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-7 col-lg-12">
+                                <div id="numListBlock" style="border:1px solid; height:100%; display:inline-flex;">
+                                    <div class="" style="padding:10px;">
+                                        <div style="min-width: 476px; border: 1px dashed">
+                                            <div class="separateScrollFullHeight" style="height:500px; overflow:hidden;">
+                                                <div class="toFloatColumnGroup">
+                                                    <div class="divNumColumnGroup">
+                                                        <RealTimeNumGrid IsThreeD="false" DicNumList="NormalNumAndPrice" StartCount="0" EndCount="9" OnTwoNumDbClick="OnDbClickTwoNum">
+                                                        </RealTimeNumGrid>
+                                                    </div>
+                                                    <div class="divNumColumnGroup">
+                                                        <RealTimeNumGrid IsThreeD="false" DicNumList="NormalNumAndPrice" StartCount="10" EndCount="19" OnTwoNumDbClick="OnDbClickTwoNum">
+                                                        </RealTimeNumGrid>
+                                                    </div>
+                                                </div>
+                                                <div class="toFloatColumnGroup">
+                                                    <div class="divNumColumnGroup">
+                                                        <RealTimeNumGrid IsThreeD="false" DicNumList="NormalNumAndPrice" StartCount="20" EndCount="29" OnTwoNumDbClick="OnDbClickTwoNum">
+                                                        </RealTimeNumGrid>
+                                                    </div>
+                                                    <div class="divNumColumnGroup">
+                                                        <RealTimeNumGrid IsThreeD="false" DicNumList="NormalNumAndPrice" StartCount="30" EndCount="39" OnTwoNumDbClick="OnDbClickTwoNum">
+                                                        </RealTimeNumGrid>
+                                                    </div>
+                                                </div>
+                                                <div class="toFloatColumnGroup">
+                                                    <div class="divNumColumnGroup">
+                                                        <RealTimeNumGrid IsThreeD="false" DicNumList="NormalNumAndPrice" StartCount="40" EndCount="49" OnTwoNumDbClick="OnDbClickTwoNum">
+                                                        </RealTimeNumGrid>
+                                                    </div>
+                                                    <div class="divNumColumnGroup">
+                                                        <RealTimeNumGrid IsThreeD="false" DicNumList="NormalNumAndPrice" StartCount="50" EndCount="59" OnTwoNumDbClick="OnDbClickTwoNum">
+                                                        </RealTimeNumGrid>
+                                                    </div>
+                                                </div>
+                                                <div class="toFloatColumnGroup">
+                                                    <div class="divNumColumnGroup">
+                                                        <RealTimeNumGrid IsThreeD="false" DicNumList="NormalNumAndPrice" StartCount="60" EndCount="69" OnTwoNumDbClick="OnDbClickTwoNum">
+                                                        </RealTimeNumGrid>
+                                                    </div>
+                                                    <div class="divNumColumnGroup">
+                                                        <RealTimeNumGrid IsThreeD="false" DicNumList="NormalNumAndPrice" StartCount="70" EndCount="79" OnTwoNumDbClick="OnDbClickTwoNum">
+                                                        </RealTimeNumGrid>
+                                                    </div>
+                                                </div>
+                                                <div class="toFloatColumnGroup">
+                                                    <div class="divNumColumnGroup">
+                                                        <RealTimeNumGrid IsThreeD="false" DicNumList="NormalNumAndPrice" StartCount="80" EndCount="89" OnTwoNumDbClick="OnDbClickTwoNum">
+                                                        </RealTimeNumGrid>
+                                                    </div>
+                                                    <div class="divNumColumnGroup">
+                                                        <RealTimeNumGrid IsThreeD="false" DicNumList="NormalNumAndPrice" StartCount="90" EndCount="99" OnTwoNumDbClick="OnDbClickTwoNum">
+                                                        </RealTimeNumGrid>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="padding:10px;">
+                                        <div style="min-width:106px; height:100%; max-height:500px; border:1px dashed; position:relative;">
+                                            <div class="separateScrollFullHeight" style="height:450px;">
+                                                @if (OverNumAndPrice != null && OverNumAndPrice.Count > 0)
+                                                {
+                                                    @foreach (KeyValuePair<string, int> keyValue in OverNumAndPrice)
+                                                    {
+                                                        <NumAndAmmountPair NumKey="@keyValue.Key" Ammount="@keyValue.Value.ToString()"></NumAndAmmountPair>
+                                                    }
+                                                }
+                                            </div>
+                                            <div class="eachNumDiv" style="position:absolute; bottom:0.5px;">
+                                                <input class="sameTopNumTotal" value="@OverAmmount" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*<DeleteConfirmModal @ref="DeleteConfirmation" ConfirmationChanged="ConfirmDelete_Click"
+                             ConfirmationTitle="Agent Delete Confirmation!" ConfirmationMessage="@AgentDeleteConfirmMessage">
+                            </DeleteConfirmModal>*@
+                        <AlertMessageDialogBox @ref="AlertMessageBox" AnimationSecond="0.5s"></AlertMessageDialogBox>
+
+                        <VoucherUpdateDelete @ref="VoucherUpdateDelete" OnUpdateProcessed="OnVoucherUpdateCallBack" OnClosedProcessed="OnVoucherUpdDelClose"
+                                             MainDigitListToUpdDel="MainDigitsToUpdDel" Agents="Agents" OnDeleteProcessed="OnVoucherDeleteCallBack"></VoucherUpdateDelete>
+
+                        <ShortcutGuide @ref="ShortcutGuide" OnHideModal="OnVoucherUpdDelClose"></ShortcutGuide>
+
+                        <AgentForOwnerSelf @ref="AgentCreateModal" Agents="AllAgents" OnAddAgentProcess="OnAddAgentCallBack"
+                                           OnUpdateAgentProcess="OnUpdateAgentCallBack" OnDeleteAgentProcess="OnDeleteAgentCallBack"
+                                           OnClosedProcessed="OnVoucherUpdDelClose"></AgentForOwnerSelf>
+
+                        <SearchedSpecificNum @ref="SearchedSpecificNum" SearchedNumString="@SearchedNum" SearchedSubdigits="SearchedSubdigits"></SearchedSpecificNum>
+                    }
+                    else
+                    {
+                        <AccessDenied></AccessDenied>
+                    }
+                </ContentTemplate>
+            </SpinLoader>
+        </div>
+    </Authorized>
+</AuthorizeView>

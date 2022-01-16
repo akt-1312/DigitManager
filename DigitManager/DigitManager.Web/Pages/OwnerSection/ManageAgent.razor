@@ -1,0 +1,170 @@
+﻿@page "/manageAgent"
+@inherits ManageAgentBase
+@attribute [Authorize(Roles = "Owner")]
+
+<AuthorizeView Roles="Owner">
+    <Authorized Context="DigitAuth">
+        <style>
+            label {
+                font-weight: 600;
+            }
+        </style>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="card-box separateScrollFullHeight">
+                        <div class="form-group mb-0 text-center">
+                            <h5><b>User Account Register Form</b></h5>
+                        </div>
+                        @if (IsResetPasswordClick && Agent.AgentId > 0)
+                        {
+                            <div>
+                                <div class="form-group">
+                                </div>
+                                <div class="form-group">
+                                    <label>New Password</label>
+                                    <input @bind="ResetPassword" class="form-control" @oninput="ResetPasswordChange" placeholder="new password" />
+                                    @if (!string.IsNullOrWhiteSpace(RequiredResetPassword))
+                                    {
+                                        <div class="text-danger">@RequiredResetPassword</div>
+                                    }
+                                </div>
+                                <div class="form-group">
+                                    <button @onclick="@(()=> ResetPasswordConfirm())" class="btn btn-success" type="button">Reset</button>
+                                    <button @onclick="@(()=> CancelResetPassword())" class="btn btn-secondary" type="button">Cancel</button>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <EditForm Model="Agent" OnValidSubmit="ValidateAgent">
+                                <DataAnnotationsValidator />
+
+                                <div>
+                                    @if (Agent.AgentId != 0)
+                                    {
+                                        <div class="form-group">
+                                            <InputNumber hidden @bind-Value="Agent.AgentId"></InputNumber>
+                                        </div>
+                                    }
+                                    <div class="form-group">
+                                        <label>User Name</label>
+                                        <InputText id="txtDefaultFocusInput" @bind-Value="Agent.UserName" class="form-control" placeholder="user name"></InputText>
+                                        <ValidationMessage For="@(() => Agent.UserName)"></ValidationMessage>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Mobile</label>
+                                        <InputText @bind-Value="Agent.Mobile" class="form-control" placeholder="mobile"></InputText>
+                                        <ValidationMessage For="@(() => Agent.Mobile)"></ValidationMessage>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>User Role</label>
+                                        <InputSelect class="col-12 form-control" @bind-Value="Agent.AgentOrPlayer" @oninput="OnRoleSelectChange" placeholder="user role">
+                                            @*<option value="">--Select Role--</option>*@
+                                            @foreach (var role in Enum.GetValues(typeof(DigitManager.ModelLibrary.AgentOrPlayerEnum)))
+                                                {
+                                                <option value="@role.ToString()">@role.ToString()</option>
+                                                }
+                                        </InputSelect>
+                                        <ValidationMessage For="@(() => Agent.AgentOrPlayer)"></ValidationMessage>
+                                    </div>
+                                    @if (Agent.AgentOrPlayer == AgentOrPlayerEnum.Agent)
+                                    {
+                                        <div class="form-group">
+                                            <label>Commission Rate</label>
+                                            <InputNumber @bind-Value="Agent.AgentCommissionMultiply" class="form-control" placeholder="commission rate"></InputNumber>
+                                            <ValidationMessage For="@(() => Agent.AgentCommissionMultiply)"></ValidationMessage>
+                                        </div>
+                                    }
+                                    @if (Agent.AgentId != 0)
+                                    {
+                                        <div class="form-group">
+                                            <InputCheckbox id="isActiveAgent" @bind-Value="Agent.IsActive" class=""></InputCheckbox>
+                                            <label for="isActiveAgent">Is Active</label>
+                                            <ValidationMessage For="@(() => Agent.IsActive)"></ValidationMessage>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="form-group">
+                                            <label>Password</label>
+                                            <InputText @bind-Value="Agent.Password" class="form-control" placeholder="password"></InputText>
+                                            <ValidationMessage For="@(() => Agent.Password)"></ValidationMessage>
+                                        </div>
+                                    }
+                                    <div class="form-group">
+                                        @{
+                                            string buttonName = IsDisabledButton ? "Loading..." : (Agent.AgentId == 0 ? "Create Agent" : "Update Agent");
+                                        }
+                                        <button disabled="@IsDisabledButton" class="btn btn-success" type="submit">@buttonName</button>
+                                        <button type="button" disabled="@IsDisabledButton" class="btn btn-secondary" @onclick="CancelButton_Click">Cancel</button>
+                                    </div>
+                                    @if (Agent.AgentId > 0)
+                                    {
+                                        <div class="form-group">
+                                            <button class="btn btn-link p-0" type="button" @onclick="@(() => ShowResetPasswordBox())">Reset Password</button>
+                                        </div>
+                                    }
+                                </div>
+                            </EditForm>
+                        }
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12">
+                    <div class="card-box separateScrollFullHeight">
+                        <SpinLoader IsLoading="IsLoading">
+                            <LoadingTemplate>
+                                <div style="height:100%; display:flex;">
+                                    <CircleFade Center="true" Color="blue" Size="90px"></CircleFade>
+                                </div>
+                            </LoadingTemplate>
+                            <ContentTemplate>
+                                <div class="row">
+                                    <div class="form-group mb-0 d-block w-100 text-center">
+                                        <input class="chkCustomDesign" type="checkbox" id="chkActiveAgentList" @bind="IsActiveAgentList" @bind:event="oninput" @onchange="IsActiveAgentList_Click" />
+                                        <label class="lblForChkCustomDesign" for="chkActiveAgentList">Active Agent List</label>
+                                    </div>
+                                    <TableTemplate Items="Agents" IsReloadList="IsTableTemplateFiltered" DefaultPageSize="15"
+                                                   IsShowTableIndex="true" OnAgentFinishedUpdated="OnSearchingFinished">
+                                        <TableHeaderTemplate>
+                                            <th>No.</th>
+                                            <GridColumn ColumnTitle="UserName" OnSearchTextChange="@(e => OnAgentSearchTextChange(e, "UserName"))"></GridColumn>
+                                            <GridColumn ColumnTitle="Mobile" OnSearchTextChange="@(e => OnAgentSearchTextChange(e, "Mobile"))"></GridColumn>
+                                            <GridColumn ColumnTitle="Role" OnSearchTextChange="@(e => OnAgentSearchTextChange(e, "Role"))"></GridColumn>
+                                            <GridColumn ColumnTitle="Rate(%)" OnSearchTextChange="@(e => OnAgentSearchTextChange(e, "CommissionRate"))"></GridColumn>
+                                            <th class="text-center" style="min-width:90px;">Actions</th>
+                                        </TableHeaderTemplate>
+
+                                        <TableRowTemplate Context="agent">
+                                            @if (Agents != null && Agents.Any())
+                                            {
+                                                string rowColor = agent.AgentId == Agent.AgentId ||
+                                                (ToDeleteAgentId != null && agent.AgentId == ToDeleteAgentId.Value) ? "background-color:khaki" : "";
+                                                <td style="@rowColor">@agent.UserName</td>
+                                                <td style="@rowColor">@agent.Mobile</td>
+                                                <td style="@rowColor">@agent.AgentOrPlayer</td>
+                                                <td style="@rowColor">@agent.AgentCommissionMultiply</td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-primary dataListTableActionButton" @onclick="@(()=> EditButton_Click(agent))"><i class="oi oi-wrench"></i></button>
+                                                    <button type="button" class="btn btn-danger dataListTableActionButton" @onclick="@(() => Delete_Click(agent.AgentId))"><i class="oi oi-trash"></i></button>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td colspan="5">There is no @(IsActiveAgentList ? "active" : "inActive") user data.</td>
+                                            }
+                                        </TableRowTemplate>
+                                    </TableTemplate>
+                                </div>
+                            </ContentTemplate>
+                        </SpinLoader>
+                    </div>
+                </div>
+            </div>
+
+            <DeleteConfirmModal @ref="DeleteConfirmation" ConfirmationChanged="ConfirmDelete_Click"
+                                ConfirmationTitle="Agent Delete Confirmation!" ConfirmationMessage="@AgentDeleteConfirmMessage"></DeleteConfirmModal>
+            <AlertMessageDialogBox @ref="AlertMessageBox" AnimationSecond="0.5s"></AlertMessageDialogBox>
+        </div>
+    </Authorized>
+</AuthorizeView>

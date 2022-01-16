@@ -1,0 +1,151 @@
+﻿@using System.Threading;
+
+<style>
+    #messageInfoBox {
+        display: none;
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        width:300px;
+        z-index:1055;
+        -webkit-animation: fadeinMessageInfoBox @AnimationSecond /*, fadeoutMessageInfoBox 0.5s 2.5s*/;
+        animation: fadeinMessageInfoBox @AnimationSecond /*, fadeoutMessageInfoBox 0.5s 2.5s*/;
+        transition: linear;
+    }
+
+    @@keyframes fadeinMessageInfoBox {
+        from {
+            bottom: 55%;
+            right: 55%;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 5px;
+            right: 5px;
+            opacity: 1;
+        }
+    }
+
+    @@keyframes fadeoutMessageInfoBox {
+        from {
+            bottom: 5px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 55%;
+            right: 55%;
+            opacity: 0;
+        }
+    }
+
+    @@-webkit-keyframes fadeinMessageInfoBox {
+        from {
+            bottom: 55%;
+            right: 55%;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 5px;
+            opacity: 1;
+        }
+    }
+
+    @@-webkit-keyframes fadeoutMessageInfoBox {
+        from {
+            bottom: 5px;
+            right: 5px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 55%;
+            right: 55%;
+            opacity: 0;
+        }
+    }
+
+    .alertMessageBox {
+        margin-bottom: 0px;
+    }
+
+    .btnClosedAlertDialogBox {
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: unset;
+        padding: 0;
+        background-color: black;
+        color: white;
+        font-size: 12px;
+    }
+
+    .spanInformationIcon {
+        border: 1px solid;
+        padding: 5px;
+        color: white;
+        border-radius: 30px;
+        font-size: 11px;
+        margin-right: 10px;
+    }
+</style>
+
+<div id="messageInfoBox" class="alertMessageDialogBox">
+
+    <div class="alert alert-@DialogBoxType alertMessageBox">
+        <div style="position:absolute; left:0; top:0; width:100%;">
+            @if (DialogBoxType == "info")
+            {
+                <span class="spanInformationIcon" style="background-color: blue; padding:5px 8px;"><i class="oi oi-info"></i></span><span style="color:blue;"><b>Information</b></span>
+            }
+            else
+            {
+                <span class="spanInformationIcon" style="background-color: yellowgreen;"><i class="oi oi-minus"></i></span><span style="color:red;"><b>Error</b></span>
+            }
+            <button class="btnClosedAlertDialogBox" @onclick="@(() => ShowOrHideDialogBox())"><i class="oi oi-x"></i></button>
+        </div>
+        <div style="margin-top:10px; font-size:14px; margin-left:15px; color:black;">@AlertMessage</div>
+    </div>
+</div>
+
+
+
+
+
+@code {
+
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+
+    public string AlertMessage { get; set; } = "";
+
+    private string DialogBoxType { get; set; } = "info";
+
+    [Parameter]
+    public string AnimationSecond { get; set; } = "0.7s";
+
+    public async Task ShowOrHideDialogBox(string alertMessage = "", bool isShow = false, bool isWarning = false)
+    {
+        AlertMessage = alertMessage;
+        if (isWarning)
+        {
+            DialogBoxType = "warning";
+        }
+        else
+        {
+            DialogBoxType = "info";
+        }
+
+        if (isShow && !string.IsNullOrWhiteSpace(alertMessage))
+        {
+            await JSRuntime.InvokeVoidAsync("ShowMessageInfoBox");
+        }
+        else
+        {
+            await JSRuntime.InvokeVoidAsync("RemoveMessageInfoBox");
+        }
+        StateHasChanged();
+    }
+}

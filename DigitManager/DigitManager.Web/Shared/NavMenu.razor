@@ -1,0 +1,276 @@
+﻿
+@inject AuthenticationStateProvider AuthenticationStateProvider;
+@inject NavigationManager NavigationManager;
+@inject IJSRuntime JSRuntime;
+@using DigitManager.Web.Auth;
+
+<style>
+    .dropdown-item {
+        color: white;
+    }
+
+        .dropdown-item:hover {
+            background-color: aquamarine;
+        }
+</style>
+
+@*<div class="top-row pl-4 navbar navbar-dark">
+        <a class="navbar-brand" href="">DigitManager</a>
+        <button class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+
+    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+        <ul class="nav flex-column">
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    <span class="oi oi-home" aria-hidden="true"></span> Home
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="counter">
+                    <span class="oi oi-plus" aria-hidden="true"></span> Counter
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="fetchdata">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+                </NavLink>
+            </li>
+        </ul>
+    </div>*@
+
+<AuthorizeView Roles="Owner">
+    <Authorized Context="dmAuth">
+        <div id="floatMenuBtn" style="position:fixed; display:inline-block; top:0px; left:0px; z-index:4;">
+            <div style="background-color:cadetblue; border-radius:20px; display:flex; align-items:center;">
+                @if (isShowNavButton)
+                {
+                    <span style="position:absolute; font-size:13px; color:yellow; left:8px;">@dmAuth.User.Identity.Name</span>
+                    <button class="btn btn-primary" id="navMainLink" style="border-radius:20px; margin-left: 100px" @onclick="ClickNavButton">
+                        <span class="oi oi-collapse-left" id="navMainIcon"></span>
+                    </button>
+                }
+                else
+                {
+                    <button class="btn btn-primary" id="navMainLink" style="border-radius:20px;" @onclick="ClickNavButton">
+                        <span class="oi oi-menu" id="navMainIcon"></span>
+                    </button>
+                }
+
+                <input hidden id="chkNavClose" @bind="isShowNavButton" type="checkbox" @onclick="CloseNavMenu" />
+            </div>
+            @if (isShowNavButton)
+            {
+                <div class="bg-danger mt-1" id="navToggleDiv" style="border-radius:10px;">
+                    <a href="/" style="text-decoration:none;" class="dropdown-item" @onclick="@(() => Logout())">
+                        <i class="oi oi-account-logout"></i> Logout
+                    </a>
+                    <a href="ownerPage" style="text-decoration:none;" class="dropdown-item" @onclick="CloseNavMenu">
+                        <i class="oi oi-home"></i> Home
+                    </a>
+                    <a href="ownerProfile" style="text-decoration:none;" class="dropdown-item" @onclick="CloseNavMenu">
+                        <i class="oi oi-shield"></i> Profile
+                    </a>
+                    <a href="manageAgent" style="text-decoration:none;" class="dropdown-item" @onclick="CloseNavMenu">
+                        <i class="oi oi-book"></i> Manage
+                    </a>
+                </div>
+            }
+        </div>
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="Agent, Player">
+    <Authorized Context="dmAuth">
+        <div id="floatMenuBtn" style="position:fixed; display:inline-block; top:0px; left:0px; z-index:4;">
+            <div style="background-color:cadetblue; border-radius:20px; display:flex; align-items:center;">
+                @if (isShowNavButton)
+                {
+                    <span style="position:absolute; font-size:13px; color:yellow; left:8px;">@dmAuth.User.Identity.Name</span>
+                    <button class="btn btn-primary" id="navMainLink" style="border-radius:20px; margin-left: 100px" @onclick="ClickNavButton">
+                        <span class="oi oi-collapse-left" id="navMainIcon"></span>
+                    </button>
+                }
+                else
+                {
+                    <button class="btn btn-primary" id="navMainLink" style="border-radius:20px;" @onclick="ClickNavButton">
+                        <span class="oi oi-menu" id="navMainIcon"></span>
+                    </button>
+                }
+                <input hidden id="chkNavClose" @bind="isShowNavButton" type="checkbox" @onclick="CloseNavMenu" />
+            </div>
+            @if (isShowNavButton)
+            {
+                <div class="bg-danger mt-1" id="navToggleDiv" style="border-radius:10px;">
+                    <a href="/" style="text-decoration:none;" class="dropdown-item" @onclick="@(() => Logout())">
+                        <i class="oi oi-account-logout"></i> Logout
+                    </a>
+                    <a href="agentPage" style="text-decoration:none;" class="dropdown-item" @onclick="CloseNavMenu">
+                        <i class="oi oi-home"></i> Home
+                    </a>
+                    <a href="agentProfile" style="text-decoration:none;" class="dropdown-item" @onclick="CloseNavMenu">
+                        <i class="oi oi-shield"></i> Profile
+                    </a>
+                </div>
+            }
+        </div>
+    </Authorized>
+</AuthorizeView>
+@{
+    #region RightMenu
+}
+@*<AuthorizeView Roles="Owner">
+        <Authorized>
+            <div id="floatMenuBtn" style="position:fixed; display:inline-block; top:0px; right:-20px; z-index:4;">
+                <div style="background-color:cadetblue; border-radius:20px;">
+                    <button class="btn btn-primary" id="navMainLink" style="border-radius:20px;" @onclick="ClickNavButton">
+                        <i class="oi oi-align-center" id="navMainIcon"></i>
+                    </button>
+                    <input hidden id="chkNavClose" @bind="isShowNavButton" type="checkbox" @onclick="CloseNavMenu" />
+                </div>
+                @if (isShowNavButton)
+                {
+                    <div class="bg-danger text-center mt-1" id="navToggleDiv" style="border-radius:10px;">
+                        <a href="/" style="text-decoration:none;" class="dropdown-item" @onclick="@(() => Logout())">
+                            Logout <i class="oi oi-account-logout"></i>
+                        </a>
+                        <a href="ownerPage" style="text-decoration:none;" class="dropdown-item" @onclick="CloseNavMenu">
+                            Home <i class="oi oi-home"></i>
+                        </a>
+                        <a href="ownerProfile" style="text-decoration:none;" class="dropdown-item" @onclick="CloseNavMenu">
+                            Profile <i class="oi oi-shield"></i>
+                        </a>
+                        <a href="manageAgent" style="text-decoration:none;" class="dropdown-item" @onclick="CloseNavMenu">
+                            Manage <i class="oi oi-book"></i>
+                        </a>
+                    </div>
+                }
+            </div>
+        </Authorized>
+    </AuthorizeView>
+
+    <AuthorizeView Roles="Agent, Player">
+        <Authorized>
+            <div id="floatMenuBtn" style="position:fixed; display:inline-block; top:0px; right:-20px; z-index:4;">
+                <div style="background-color:cadetblue; border-radius:20px;">
+                    <button class="btn btn-primary" id="navMainLink" style="border-radius:20px;" @onclick="ClickNavButton">
+                        <i class="oi oi-align-center" id="navMainIcon"></i>
+                    </button>
+                    <input hidden id="chkNavClose" @bind="isShowNavButton" type="checkbox" @onclick="CloseNavMenu" />
+                </div>
+                @if (isShowNavButton)
+                {
+                    <div class="bg-danger text-center mt-1" id="navToggleDiv" style="border-radius:10px;">
+                        <a href="/" style="text-decoration:none;" class="dropdown-item" @onclick="@(() => Logout())">
+                            Logout <i class="oi oi-account-logout"></i>
+                        </a>
+                        <a href="agentPage" style="text-decoration:none;" class="dropdown-item" @onclick="CloseNavMenu">
+                            Home <i class="oi oi-home"></i>
+                        </a>
+                        <a href="agentProfile" style="text-decoration:none;" class="dropdown-item" @onclick="CloseNavMenu">
+                            Profile <i class="oi oi-shield"></i>
+                        </a>
+                    </div>
+                }
+            </div>
+        </Authorized>
+    </AuthorizeView>*@
+@{
+    #endregion
+}
+
+
+@code {
+
+    private bool collapseNavMenu = true;
+
+    private bool isShowNavButton;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    protected async override Task OnInitializedAsync()
+    {
+        await JSRuntime.InvokeVoidAsync("BodyClickCloseNav");
+    }
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    private void ClickNavButton()
+    {
+        isShowNavButton = !isShowNavButton;
+    }
+
+    public void CloseNavMenu()
+    {
+        isShowNavButton = false;
+    }
+
+    public void Logout()
+    {
+        isShowNavButton = false;
+        ((CustomAuthenticationStateProvider)AuthenticationStateProvider).DigitUserAsLogOut();
+        NavigationManager.NavigateTo("/", true);
+
+    }
+}
+
+
+
+@*@inject AuthenticationStateProvider AuthenticationStateProvider;
+    @inject NavigationManager NavigationManager;
+    @using DigitManager.Web.Auth;
+
+    <div class="top-row pl-4 navbar navbar-dark">
+        <a class="navbar-brand" href="">DigitManager.Web</a>
+        <button class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+
+    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+        <ul class="nav flex-column">
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="/" Match="NavLinkMatch.All" @onclick="@(() => Logout())">
+                    <span class="oi oi-home" aria-hidden="true"></span> Logout
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    <span class="oi oi-home" aria-hidden="true"></span> Home
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="counter">
+                    <span class="oi oi-plus" aria-hidden="true"></span> Counter
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="fetchdata">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+                </NavLink>
+            </li>
+        </ul>
+    </div>
+
+    @code {
+        private bool collapseNavMenu = true;
+
+        private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+        private void ToggleNavMenu()
+        {
+            collapseNavMenu = !collapseNavMenu;
+        }
+
+        public void Logout()
+        {
+            NavigationManager.NavigateTo("/", true);
+            ((CustomAuthenticationStateProvider)AuthenticationStateProvider).DigitUserAsLogOut();
+
+        }
+    }*@

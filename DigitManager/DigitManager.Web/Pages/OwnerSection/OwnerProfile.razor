@@ -1,0 +1,147 @@
+﻿@page "/ownerProfile"
+@inherits DigitManager.Web.Pages.OwnerSection.OwnerProfileBase
+@attribute [Authorize(Roles = "Owner")]
+
+<AuthorizeView Roles="Owner">
+    <Authorized Context="DigitAuth">
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                <div class="card-box separateScrollFullHeight">
+                    <div class="form-group mb-0 text-center">
+                        <h5><b>Welcome @DigitAuth.User.Identity.Name</b></h5>
+                    </div>
+                    @if (IsChangePasswordClick && Owner.OwnerId > 0)
+                    {
+                        <div>
+                            <div class="form-group">
+                            </div>
+                            <div class="form-group">
+                                <label>Old Password</label>
+                                <input @bind="OldPassword" class="form-control" @oninput="OldPasswordChange" placeholder="old password" type="password" />
+                                @if (!string.IsNullOrWhiteSpace(OldPasswordValidationMessage))
+                                {
+                                    <div class="text-danger">@OldPasswordValidationMessage</div>
+                                }
+                            </div>
+                            <div class="form-group">
+                                <label>New Password</label>
+                                <input @bind="ChangePassword" class="form-control" @oninput="NewPasswordChange" placeholder="new password" type="password" />
+                                @if (!string.IsNullOrWhiteSpace(PasswordValidationMessage))
+                                {
+                                    <div class="text-danger">@PasswordValidationMessage</div>
+                                }
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password</label>
+                                <input @bind="ConfirmPassword" class="form-control" @oninput="ConfirmPasswordChange" placeholder="confirm password" type="password" />
+                                @if (!string.IsNullOrWhiteSpace(ConfirmPasswordValidationMessage))
+                                {
+                                    <div class="text-danger">@ConfirmPasswordValidationMessage</div>
+                                }
+                            </div>
+                            <div class="form-group">
+                                <button @onclick="@(()=> ChangePasswordConfirm())" class="btn btn-success" type="button">Save</button>
+                                <button @onclick="@(()=> CancelUpdate_Click())" class="btn btn-secondary" type="button">Cancel</button>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <EditForm Model="Owner" OnValidSubmit="ValidateOwner">
+                            <DataAnnotationsValidator />
+
+                            <div>
+                                @if (Owner.OwnerId != 0)
+                                {
+                                    <div class="form-group">
+                                        <InputNumber hidden @bind-Value="Owner.OwnerId"></InputNumber>
+                                    </div>
+                                }
+                                <div class="form-group">
+                                    <label>User Name</label>
+                                    <InputText id="txtDefaultFocusInput" @bind-Value="Owner.UserName" class="form-control" placeholder="user name"></InputText>
+                                    <ValidationMessage For="@(() => Owner.UserName)"></ValidationMessage>
+                                </div>
+                                <div class="form-group">
+                                    <label>Mobile</label>
+                                    <InputText @bind-Value="Owner.Mobile" class="form-control" placeholder="mobile"></InputText>
+                                    <ValidationMessage For="@(() => Owner.Mobile)"></ValidationMessage>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Lucky Multiply</label>
+                                    <InputNumber @bind-Value="Owner.LuckyMultiply" class="form-control" placeholder="lucky multiply"></InputNumber>
+                                    <ValidationMessage For="@(() => Owner.LuckyMultiply)"></ValidationMessage>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Max Ammount To Play</label>
+                                    <InputNumber @bind-Value="Owner.DefaultMaxAmmountToPlay" class="form-control" placeholder="max ammount to play"></InputNumber>
+                                    <ValidationMessage For="@(() => Owner.DefaultMaxAmmountToPlay)"></ValidationMessage>
+                                </div>
+                                <div class="form-group">
+                                    <label>Morning Deadline</label>
+                                    <div>
+                                        <CustomInputSelect @bind-Value="Owner.DeadlineHourAM">
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                        </CustomInputSelect>
+                                        <CustomInputSelect @bind-Value="Owner.DeadlineMinutesAM">
+                                            @for (int i = 0; i < 60; i++)
+                                                {
+                                                <option value="@i">@i</option>
+                                                }
+                                        </CustomInputSelect>
+                                    </div>
+                                    <ValidationMessage For="@(() => Owner.DeadlineHourAM)"></ValidationMessage>
+                                    <ValidationMessage For="@(() => Owner.DeadlineMinutesAM)"></ValidationMessage>
+                                </div>
+                                <div class="form-group">
+                                    <label>Evening Deadline</label>
+                                    <div>
+                                        <CustomInputSelect @bind-Value="Owner.DeadlineHourPM">
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </CustomInputSelect>
+                                        <CustomInputSelect @bind-Value="Owner.DeadlineMinutesPM">
+                                            @for (int i = 0; i < 60; i++)
+                                                {
+                                                <option value="@i">@i</option>
+                                                }
+                                        </CustomInputSelect>
+                                    </div>
+                                    <ValidationMessage For="@(() => Owner.DeadlineHourPM)"></ValidationMessage>
+                                    <ValidationMessage For="@(() => Owner.DeadlineMinutesPM)"></ValidationMessage>
+                                </div>
+                                <div class="form-group">
+                                    <InputCheckbox id="isActiveOwner" @bind-Value="Owner.IsActive" class=""></InputCheckbox>
+                                    <label for="isActiveOwner">Is Active</label>
+                                    <ValidationMessage For="@(() => Owner.IsActive)"></ValidationMessage>
+                                </div>
+
+                                <div class="form-group">
+                                    @{
+                                        string buttonName = IsLoading ? "Loading..." : "Update";
+                                    }
+                                    <button disabled="@IsLoading" class="btn btn-success" type="submit">@buttonName</button>
+                                    <button @onclick="@(()=> CancelUpdate_Click())" type="button" disabled="@IsLoading" class="btn btn-secondary">Cancel</button>
+                                </div>
+
+                                <div class="form-group">
+                                    <button class="btn btn-link p-0" type="button" @onclick="@(() => ChangePassword_Click())">Change Password</button>
+                                </div>
+
+                            </div>
+                        </EditForm>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <input type="text" @oninput="OnTestInput" />
+                <h1>@TestString</h1>
+            </div>
+        </div>
+
+        <AlertMessageDialogBox @ref="AlertMessageBox" AnimationSecond="0.5s"></AlertMessageDialogBox>
+    </Authorized>
+</AuthorizeView>

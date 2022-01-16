@@ -1,0 +1,30 @@
+﻿
+<Router AppAssembly="@typeof(Program).Assembly">
+    <Found Context="routeData">
+        <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" >
+            <Authorizing>
+                <SpinLoader IsLoading="true">
+                    <LoadingTemplate>
+                        <div>Authorizing.....</div>
+                        <div style="height:80vh; display:flex; z-index:10;">
+                            <Wave Center="true" Color="blue" Size="70px"></Wave>
+                        </div>
+                    </LoadingTemplate>
+                    <ContentTemplate>
+                        <h3>Authorizing.....</h3>
+                    </ContentTemplate>
+                </SpinLoader>
+            </Authorizing>
+            <NotAuthorized>
+                <AccessDenied></AccessDenied>
+            </NotAuthorized>
+        </AuthorizeRouteView>
+</Found>
+    <NotFound>
+        <CascadingAuthenticationState>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <p>Sorry, there's nothing at this address.</p>
+            </LayoutView>
+        </CascadingAuthenticationState>
+    </NotFound>
+</Router>

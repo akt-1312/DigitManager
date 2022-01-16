@@ -1,0 +1,22 @@
+﻿@inject AuthenticationStateProvider AuthenticationStateProvider;
+@inject NavigationManager NavigationManager;
+@using DigitManager.Web.Auth;
+
+<div style="height:95vh; display:flex; justify-content:center; align-items:center; z-index:10;">
+    <div>
+        <div class="text-center"><p class="text-warning"><h2>You Are Not Authorize! Please Login.</h2></p></div>
+        <div style="width:100%; height:250px; position:relative; text-align:center;">
+            <a href="/"><img style="width:300px; height:100%;" src="/images/WarningImage.png" @onclick="@(() => Logout())" /></a>
+        </div>
+        <a href="/" class="text-center" @onclick="@(() => Logout())"><p class="text-info"><span>click here to login</span></p></a>
+    </div>
+</div>
+
+@code{
+    public void Logout()
+    {
+        //NavigationManager.NavigateTo("/", true);
+        ((CustomAuthenticationStateProvider)AuthenticationStateProvider).DigitUserAsLogOut();
+
+    }
+}

@@ -1,0 +1,69 @@
+﻿
+<style>
+    .btnSellingDigit {
+        border: 1px solid silver;
+        border-radius: 0.2rem;
+        width: 30px;
+    }
+</style>
+
+<div>
+    <div style="margin-bottom:5px; display:inline-block;">
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("1"))">1</button>
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("2"))">2</button>
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("3"))">3</button>
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("4"))">4</button>
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("5"))">5</button>
+
+    </div>
+    <div style="margin-bottom:5px; display:inline-block">
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("6"))">6</button>
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("7"))">7</button>
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("8"))">8</button>
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("9"))">9</button>
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("0"))">0</button>
+    </div>
+    <div style="margin-bottom:5px; display:inline-block;">
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("."))">.</button>
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("/"))">/</button>
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("*"))">*</button>
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("+"))">+</button>
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("-"))">-</button>
+        <button class="btnSellingDigit" @onclick="@(() => OnTouchButtonClick("Back"))"><span class="oi oi-arrow-thick-left"></span></button>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public string NumString { get; set; }
+
+    [Parameter]
+    public EventCallback<string> NumStringChanged { get; set; }
+
+    private string BoundValue
+    {
+        get => NumString;
+        set => NumStringChanged.InvokeAsync(value);
+    }
+
+    private Task OnTouchButtonClick(string inputStr)
+    {
+        if (inputStr != null)
+        {
+            if (inputStr.StringCompareFormat() != "back")
+            {
+                NumString += inputStr;
+            }
+            else
+            {
+                if (NumString.Length > 0)
+                {
+                    NumString = NumString.Substring(0, NumString.Length - 1);
+                }
+            }
+        }
+
+        return NumStringChanged.InvokeAsync(NumString);
+    }
+}

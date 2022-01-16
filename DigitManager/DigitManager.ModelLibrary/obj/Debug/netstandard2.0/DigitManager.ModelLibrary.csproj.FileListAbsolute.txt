@@ -1,0 +1,19 @@
+D:\AKT_Digit_Project\DigitManager\DigitManager.ModelLibrary\bin\Debug\netstandard2.0\DigitManager.ModelLibrary.deps.json
+D:\AKT_Digit_Project\DigitManager\DigitManager.ModelLibrary\bin\Debug\netstandard2.0\DigitManager.ModelLibrary.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.ModelLibrary\bin\Debug\netstandard2.0\DigitManager.ModelLibrary.pdb
+D:\AKT_Digit_Project\DigitManager\DigitManager.ModelLibrary\obj\Debug\netstandard2.0\DigitManager.ModelLibrary.csprojAssemblyReference.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.ModelLibrary\obj\Debug\netstandard2.0\DigitManager.ModelLibrary.AssemblyInfoInputs.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.ModelLibrary\obj\Debug\netstandard2.0\DigitManager.ModelLibrary.AssemblyInfo.cs
+D:\AKT_Digit_Project\DigitManager\DigitManager.ModelLibrary\obj\Debug\netstandard2.0\DigitManager.ModelLibrary.csproj.CoreCompileInputs.cache
+D:\AKT_Digit_Project\DigitManager\DigitManager.ModelLibrary\obj\Debug\netstandard2.0\DigitManager.ModelLibrary.dll
+D:\AKT_Digit_Project\DigitManager\DigitManager.ModelLibrary\obj\Debug\netstandard2.0\DigitManager.ModelLibrary.pdb
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.ModelLibrary\bin\Debug\netstandard2.0\DigitManager.ModelLibrary.deps.json
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.ModelLibrary\bin\Debug\netstandard2.0\DigitManager.ModelLibrary.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.ModelLibrary\bin\Debug\netstandard2.0\DigitManager.ModelLibrary.pdb
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.ModelLibrary\obj\Debug\netstandard2.0\DigitManager.ModelLibrary.csproj.AssemblyReference.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.ModelLibrary\obj\Debug\netstandard2.0\DigitManager.ModelLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.ModelLibrary\obj\Debug\netstandard2.0\DigitManager.ModelLibrary.AssemblyInfoInputs.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.ModelLibrary\obj\Debug\netstandard2.0\DigitManager.ModelLibrary.AssemblyInfo.cs
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.ModelLibrary\obj\Debug\netstandard2.0\DigitManager.ModelLibrary.csproj.CoreCompileInputs.cache
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.ModelLibrary\obj\Debug\netstandard2.0\DigitManager.ModelLibrary.dll
+D:\Old Data\DM_Back\DM_2020_12_14\DigitManager\DigitManager.ModelLibrary\obj\Debug\netstandard2.0\DigitManager.ModelLibrary.pdb

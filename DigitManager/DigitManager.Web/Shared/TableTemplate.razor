@@ -1,0 +1,238 @@
+﻿@typeparam TItem
+
+<style>
+    .btnPagination {
+        margin: 2px;
+        padding: .1rem .3rem;
+    }
+
+        .btnPagination:focus, .btnPagination:active {
+            box-shadow: none;
+            outline: none;
+        }
+    .btn.disabled {
+        pointer-events: none;
+    }
+
+    #txtItemPerPage {
+        width: 40px;
+        text-align: center;
+        border: 1px solid #6c757d;
+        background-color: #17a2b8;
+        color: white;
+        border-radius: 5px;
+        padding: 0px;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input#txtItemPerPage::-webkit-outer-spin-button,
+    input#txtItemPerPage::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input#txtItemPerPage[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    #divItemPerPage, #divTotalPage{
+        font-size: 11px;
+    }
+
+    #tblTemplated thead tr th{
+        font-size: 14px;
+        font-weight:600;
+    }
+
+    input.gridColumnSearchInput{
+        min-width:95px;
+    }
+</style>
+
+<table id="tblTemplated" class="table table-bordered table-hover table-striped dataListTable mb-1">
+    <thead class="bg-info">
+        <tr>
+            @TableHeaderTemplate
+        </tr>
+    </thead>
+    <tbody>
+        @if (ItemList != null && ItemList.Any())
+        {
+            @foreach (var item in ItemList.Select((value, i) => new { value, i }))
+            {
+                <tr>
+                    @if (IsShowTableIndex)
+                    {
+                        <td>@(Items.ToList().IndexOf(item.value) + 1)@*@(item.i + 1) @("<<>>")*@</td>
+                    }
+                    @TableRowTemplate(item.value)
+                </tr>
+            }
+        }
+        else
+        {
+            if (Items != null)
+            {
+                <tr>
+                    @TableRowTemplate(Items.FirstOrDefault())
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<div class="" style="display:block; width: 100%; text-align:center; background:burlywood;">
+    @{
+
+        bool isDisabledFirstAndPrev = CurrentPage == 1 || ItemList == null || ItemList.Count() == 0 ? true : false;
+        bool isDisabledLastAndNext = CurrentPage == TotalPages || ItemList == null || ItemList.Count() == 0 ? true : false;
+
+        int startPage = TotalPages > 10 && CurrentPage > 5 && CurrentPage + 5 <= TotalPages ? (CurrentPage - 4) : 1;
+        startPage = TotalPages - CurrentPage < 5 ? TotalPages - 9 : startPage;
+        startPage = startPage < 0 ? 1 : startPage;
+        int endPage = TotalPages > 10 && CurrentPage + 5 <= TotalPages ? (CurrentPage <= 5 ? 10 : (CurrentPage + 5)) : TotalPages;
+        endPage = endPage > TotalPages ? TotalPages : endPage;
+    }
+    <div id="divItemPerPage" class="d-inline-block">
+        <input id="txtItemPerPage" class="txtItemPerPage" type="number" @bind="PageSize" @bind:event="oninput" @onchange="OnPageSizeChange" /><span> Item(s)<b>/</b>Page</span>
+    </div>
+    <div class="btn-group">
+        <button disabled="@isDisabledFirstAndPrev" class="btn btn-sm btn-secondary btnPagination" @onclick="@(() => PaginationNavigateTo("first"))">@("<<")</button>
+        <button disabled="@isDisabledFirstAndPrev" class="btn btn-sm btn-secondary btnPagination" @onclick="@(() => PaginationNavigateTo("prev"))">prev</button>
+        @for (int i = startPage; i <= endPage; i++)
+        {
+            int pageNumber = i;
+            <button class="btn btn-sm btn-@(CurrentPage == pageNumber ? "dark" : "info") btnPagination" @onclick="@(() => UpdateList(pageNumber))">
+                @(i)
+            </button>
+        }
+        <button disabled="@isDisabledLastAndNext" class="btn btn-sm btn-secondary btnPagination" @onclick="@(() => PaginationNavigateTo("next"))">next</button>
+        <button disabled="@isDisabledLastAndNext" class="btn btn-sm btn-secondary btnPagination" @onclick="@(() => PaginationNavigateTo("last"))">@(">>")</button>
+    </div>
+    @if (CurrentPage > 0)
+    {
+        <div id="divTotalPage" class="d-inline-block">Page @CurrentPage of @TotalPages</div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public int DefaultPageSize { get; set; }
+
+    public int PageSize { get; set; }
+
+    public int TotalPages { get; set; }
+
+    public int CurrentPage { get; set; } = 1;
+
+    [Parameter]
+    public bool IsReloadList { get; set; }
+
+    [Parameter]
+    public bool IsShowTableIndex { get; set; }
+
+    [Parameter]
+    public RenderFragment TableHeaderTemplate { get; set; }
+
+    [Parameter]
+    public RenderFragment<TItem> TableRowTemplate { get; set; }
+
+    [Parameter]
+    public IReadOnlyList<TItem> Items { get; set; }
+
+    public IReadOnlyList<TItem> ItemList { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> OnAgentFinishedUpdated { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        PageSize = PageSize == 0 ? DefaultPageSize : PageSize;
+        if (Items != null && Items.Any())
+        {
+            PageSize = PageSize <= 0 ? 20 : PageSize;
+            ItemList = Items.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+            TotalPages = (int)Math.Ceiling(Items.Count() / (decimal)PageSize);
+            if (CurrentPage > TotalPages)
+            {
+                CurrentPage = TotalPages;
+                ItemList = Items.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+            }
+
+            if (CurrentPage <= 0 && ItemList != null && ItemList.Any())
+            {
+                CurrentPage = 1;
+            }
+        }
+        else
+        {
+            ItemList = new List<TItem>();
+            CurrentPage = 0;
+            TotalPages = 0;
+        }
+
+        base.OnParametersSet();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender && IsReloadList)
+        {
+            await UpdateList(CurrentPage);
+            IsReloadList = false;
+
+            StateHasChanged();
+        }
+
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+    private async Task UpdateList(int pageNumber = 1)
+    {
+        ItemList = Items.Skip((pageNumber - 1) * PageSize).Take(PageSize).ToList();
+        TotalPages = (int)Math.Ceiling(Items.Count() / (decimal)PageSize);
+        CurrentPage = pageNumber;
+        if (CurrentPage > TotalPages)
+        {
+            CurrentPage = TotalPages;
+            ItemList = Items.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+        }
+
+        await OnAgentFinishedUpdated.InvokeAsync(false);
+    }
+
+    private async Task PaginationNavigateTo(string direction)
+    {
+        if (direction == "prev" && CurrentPage > 1)
+            CurrentPage -= 1;
+
+        if (direction == "next" && CurrentPage < TotalPages)
+            CurrentPage += 1;
+
+        if (direction == "first")
+            CurrentPage = 1;
+
+        if (direction == "last")
+            CurrentPage = TotalPages;
+
+        await UpdateList(CurrentPage);
+    }
+
+    private async Task OnPageSizeChange(ChangeEventArgs args)
+    {
+        //int pageSize;
+        if (int.TryParse(args.Value.ToString(), out int pageSize))
+        {
+            pageSize = pageSize <= 0 ? DefaultPageSize : pageSize;
+        }
+        else
+        {
+            pageSize = DefaultPageSize;
+        }
+
+        PageSize = pageSize;
+
+        await UpdateList(CurrentPage);
+    }
+}

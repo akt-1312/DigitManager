@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "028f6fcd-6316-4c41-9bb0-b62d066e9116": {
+      "ProjectGuid": "028f6fcd-6316-4c41-9bb0-b62d066e9116",
+      "DisplayName": "DigitManager.Api",
+      "ColorIndex": 0
+    },
+    "666b510b-ce30-47bb-854c-bfd3263adbf5": {
+      "ProjectGuid": "666b510b-ce30-47bb-854c-bfd3263adbf5",
+      "DisplayName": "DigitManager.Web",
+      "ColorIndex": 1
+    },
+    "5504c2f3-1642-4509-8c5c-a3b3a495762f": {
+      "ProjectGuid": "5504c2f3-1642-4509-8c5c-a3b3a495762f",
+      "DisplayName": "DigitManager.ModelLibrary",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

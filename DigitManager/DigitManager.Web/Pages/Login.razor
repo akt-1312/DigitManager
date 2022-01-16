@@ -1,0 +1,65 @@
+﻿@page "/"
+@inherits LoginBase
+@using DigitManager.Web.Models;
+
+<AuthorizeView>
+    <NotAuthorized Context="Auth">
+        <div class="container">
+            <div style="display:flex; height:90vh; align-items:center; justify-content:center;">
+                <div class="col-sm-12 col-lg-8 card">
+                    <div class="col-12 row">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="col-12 row">
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <img src="/images/digits.jpg" asp-append-version="true" style="width:100%; height:100%;" />
+                        </div>
+
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <EditForm Model="LoginUser" OnValidSubmit="ValidateUser">
+                                <DataAnnotationsValidator />
+                                <div><br /></div>
+                                <div>
+                                    <h3 style="font-weight:bold; color:purple; text-align:center;">Digit Manager</h3>
+                                </div>
+                                <div><br /></div>
+                                <div class="col-12 row m-2">
+                                    <InputText class="col-12 form-control" @bind-Value="LoginUser.UserName" placeholder="User Name" />
+                                    <ValidationMessage For="@(() => LoginUser.UserName)"></ValidationMessage>
+                                </div>
+                                <div class="col-12 row m-2">
+                                    <InputSelect class="col-12 form-control" @bind-Value="LoginUser.Role">
+                                        @*<option value="">--Select Role--</option>*@
+                                        @foreach (var role in Enum.GetValues(typeof(LoginUserRoleEnum)))
+                                        {
+                                            <option value="@role.ToString()">@role.ToString()</option>
+                                        }
+                                    </InputSelect>
+                                    <ValidationMessage For="@(() => LoginUser.Role)"></ValidationMessage>
+                                </div>
+                                <div class="col-12 row m-2">
+                                    <InputText type="password" class="col-12 form-control" @bind-Value="LoginUser.Password" placeholder="Password" />
+                                    <ValidationMessage For="@(() => LoginUser.Password)"></ValidationMessage>
+                                </div>
+                                <div class="col-12 row m-2">
+                                    <div class="form-group">
+                                        <InputCheckbox id="chkRemember" type="checkbox" class="custom-checkbox" @bind-Value="LoginUser.IsRemember" /> <label for="chkRemember">Remember Me</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 row m-2">
+                                    <button disabled="@IsDisabledButton" type="submit" class="form-control col-12 btn btn-primary">@LoginButtonName</button>
+                                </div>
+                            </EditForm>
+                        </div>
+                    </div>
+                    <div class="col-12 row">
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <AlertMessageDialogBox @ref="DeleteConfirmAlertMessageBox" AnimationSecond="0.5s"></AlertMessageDialogBox>
+    </NotAuthorized>
+</AuthorizeView>
+

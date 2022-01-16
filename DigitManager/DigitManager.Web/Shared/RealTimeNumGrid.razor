@@ -1,0 +1,43 @@
+﻿
+
+@{
+    int groupByTotalAmmount = 0;
+}
+@for (int i = StartCount; i <= EndCount; i++)
+{
+    string key = i.ToString();
+    int keyLength = key.Length;
+    key = IsThreeD ? (keyLength < 3 ? (keyLength < 2 ? "00" + key : "0" + key) : (key)) : (keyLength < 2 ? "0" + key : key);
+    <NumAndAmmountPair NumKey="@key" Ammount="@(DicNumList[key].ToString())" OnDbClickTwoNum="ChildTwoNumDbClick"></NumAndAmmountPair>
+    groupByTotalAmmount += DicNumList[key];
+}
+<div class="eachNumDiv">
+    <input readonly class="sameTopNumTotal" value="@groupByTotalAmmount" />
+</div>
+
+@{
+    groupByTotalAmmount = 0;
+}
+
+@code {
+    [Parameter]
+    public int StartCount { get; set; }
+
+    [Parameter]
+    public int EndCount { get; set; }
+
+    [Parameter]
+    public Dictionary<string, int> DicNumList { get; set; }
+
+    [Parameter]
+    public bool IsThreeD { get; set; }
+
+    [Parameter]
+    public EventCallback<string> OnTwoNumDbClick { get; set; }
+
+    public async Task ChildTwoNumDbClick(string twoNum)
+    {
+        await OnTwoNumDbClick.InvokeAsync(twoNum);
+        StateHasChanged();
+    }
+}

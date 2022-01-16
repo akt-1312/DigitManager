@@ -1,0 +1,93 @@
+﻿
+<style>
+    #tblShortcutGuide th, #tblShortcutGuide td{
+        padding: 0px 30px;
+        font-size:13px;
+    }
+    #shortcutGuideModal{
+        position:absolute;
+    }
+    #shortcutGuideModal .modal-content{
+        background-color: aquamarine;
+    }
+</style>
+
+@if (IsShowDetailShortcut)
+{
+    <div class="modal fade show d-block" id="shortcutGuideModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="text-center w-100">အတိုကောက် သကေင်္ံတ</h5>
+                    <button @onclick="Hide" class="close">
+                        <span>&times;</span>
+                    </button>
+                    @*<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background:black; color:white;
+                              border: 0.7px solid silver; border-radius: 0.3rem; opacity:1;"
+                            @onclick="@(()=> IsShowDetailShortcut = false)">
+                        <span aria-hidden="true">&times;</span>
+                    </button>*@
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div class="row separateScrollFullHeight" style="height:400px;">
+                            <table id="tblShortcutGuide" class="table table-info table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Shortcut Symbol</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="hintTdText">R</td><td class="hintTdSign">/</td><td class="hintTdSign">123456/500 => 12,34,56 R 500</td></tr>
+                                    <tr><td class="hintTdText">ဒဲ့</td><td class="hintTdSign">.</td><td class="hintTdSign">123456.500 => 12,34,56 ဒဲ့ 500</td></tr>
+                                    <tr><td class="hintTdText">...ဒဲ့...R..</td><td class="hintTdSign">. /</td><td class="hintTdSign">123456.500/250 => 12,34,56 ဒဲ့ 500 R 250</td></tr>
+                                    <tr><td class="hintTdText">ပါတ်</td><td class="hintTdSign">*</td><td class="hintTdSign">1234*500 => 1,2,3,4 ပါတ် 500</td></tr>
+                                    <tr><td class="hintTdText">အပူး</td><td class="hintTdSign">**</td><td class="hintTdSign">**500 => အပူး 500</td></tr>
+                                    <tr><td class="hintTdText">ပါတ်အပူး</td><td class="hintTdSign">***</td><td class="hintTdSign">1234***500 => 1,2,3,4 ပါတ်အပူး 500</td></tr>
+                                    <tr><td class="hintTdText">ခွေ</td><td class="hintTdSign">//</td><td class="hintTdSign">1234//500 => 1234 ခွေ 500</td></tr>
+                                    <tr><td class="hintTdText">အပူးအပါခွေ</td><td class="hintTdSign">///</td><td class="hintTdSign">1234///500 => 1234 အပူးအပါခွေ 500</td></tr>
+                                    <tr><td class="hintTdText">ထိပ်</td><td class="hintTdSign">+</td><td class="hintTdSign">123+500 => 1,2,3 ထိပ် 500</td></tr>
+                                    <tr><td class="hintTdText">နောက်</td><td class="hintTdSign">-</td><td class="hintTdSign">123-500 => 1,2,3 နောက် 500</td></tr>
+                                    <tr><td class="hintTdText">ညီအကို</td><td class="hintTdSign">+-</td><td class="hintTdSign">+-500 => ညီအကို 500</td></tr>
+                                    <tr><td class="hintTdText">ပါဝါ</td><td class="hintTdSign">*+</td><td class="hintTdSign">*+500 => ပါဝါ 500</td></tr>
+                                    <tr><td class="hintTdText">နက္ခတ်</td><td class="hintTdSign">*-</td><td class="hintTdSign">*-500 => နက္ခတ် 500</td></tr>
+                                    <tr><td class="hintTdText">စုံစုံ</td><td class="hintTdSign">/+</td><td class="hintTdSign">/+500 => စုံစုံ 500</td></tr>
+                                    <tr><td class="hintTdText">မမ</td><td class="hintTdSign">/-</td><td class="hintTdSign">/-500 => မမ 500</td></tr>
+                                    <tr><td class="hintTdText">စုံပူး</td><td class="hintTdSign">++</td><td class="hintTdSign">++500 => စုံပူး 500</td></tr>
+                                    <tr><td class="hintTdText">မပူး</td><td class="hintTdSign">--</td><td class="hintTdSign">--500 => မပူး 500</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        @*<div>
+                            <button class="btn btn-secondary" @onclick="@(()=> IsShowDetailShortcut = false)">Close</button>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+
+    protected bool IsShowDetailShortcut { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> OnHideModal { get; set; }
+
+    public void Show()
+    {
+        IsShowDetailShortcut = true;
+        StateHasChanged();
+    }
+
+    private async Task Hide()
+    {
+        IsShowDetailShortcut = false;
+        StateHasChanged();
+        await OnHideModal.InvokeAsync(true);
+    }
+
+}
